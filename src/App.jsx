@@ -41,7 +41,7 @@ function App() {
     <div className='App'>
       <header>
         <figure>
-          <img src='/public/react.png' alt='' />
+          <img src='/react.png' alt='' />
         </figure>
         <h2>
           Prueba trainee by <span>Santiago</span>

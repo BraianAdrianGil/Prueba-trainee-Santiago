@@ -2,6 +2,8 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 2px 2px 8px black;
+  padding: 12px 10px 10px 10px;
 }
 .cat__img__container img {
   max-width: 100%;

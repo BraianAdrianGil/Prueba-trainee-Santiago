@@ -1,0 +1,80 @@
+.buttons__container {
+  width: 100%;
+  padding: 2rem 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.button__left,
+.button__right {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  scale: 1;
+  transition: 0.5s ease;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+.button__left:hover,
+.button__right:hover {
+  background-color: orange;
+  color: white;
+  transform: scale(1.1);
+}
+.cat__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+  scale: 1;
+  transition: 0.5s ease;
+  box-shadow: 3px 3px 8px black;
+  cursor: pointer;
+}
+.cat__button:hover {
+  transform: scale(1.1);
+  background-color: orange;
+  color: white;
+  transition: 0.5s ease;
+}
+.buttons__array__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+.buttons__array__container button {
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  scale: 1;
+  transition: 0.5s ease;
+}
+.buttons__array__container button:hover {
+  background-color: orange;
+  color: white;
+  transform: scale(1.2);
+}
+.current__button {
+  background-color: orange;
+  color: white;
+}

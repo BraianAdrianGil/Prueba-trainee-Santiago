@@ -8,7 +8,9 @@ const catSlice = createSlice({
   reducers: {
     addCatToState(state, action) {
       const data = action.payload;
-      return [...state, { img: data }];
+      const statusCodeSplit = data.split('/');
+      const statusCode = statusCodeSplit.slice(statusCodeSplit.length - 1);
+      return [...state, { img: data, statusCode }];
     },
   },
 });

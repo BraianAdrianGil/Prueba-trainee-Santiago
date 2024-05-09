@@ -1,9 +1,23 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { getRandomNumber } from '../../utils/getRandomNumber';
+import { CAT_STATUS_CODES } from '../../constants';
+import { getCat } from '../../services/getCat';
+import { addCatToState } from '../../store/slices/catSlice';
 import './PageButtons.css';
 
-const PageButtons = ({ buttonsProps }) => {
+const PageButtons = ({ buttonsProps, currentStatusCode }) => {
   const { totalPages, handleChangePage, handleSetCurrentPage, currentPage } =
     buttonsProps;
   const arrayFromTotalPages = Array(totalPages).fill('undefined');
+  const catData = useSelector((store) => store.cat);
+  const dispatch = useDispatch();
+
+  const handleCatButtonClick = async () => {
+    const randomNUmber = getRandomNumber(CAT_STATUS_CODES);
+    if (currentStatusCode.includes(randomNUmber)) return;
+    const newCat = await getCat(randomNUmber);
+    dispatch(addCatToState(newCat));
+  };
 
   return (
     <>
@@ -17,7 +31,9 @@ const PageButtons = ({ buttonsProps }) => {
         </button>
 
         {/* cat button */}
-        <button className='cat__button'>Agregar un gatito 🐈</button>
+        <button className='cat__button' onClick={handleCatButtonClick}>
+          Agregar un gatito 🐈
+        </button>
 
         {/* right arrow button  */}
         <button
